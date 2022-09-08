@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "ArchiveSystem.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ArchiveSystem.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ArchiveSystem.Models.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ArchiveSystem.Models/1.0.0": {
+      "type": "project",
+      "path": "../ArchiveSystem.Models/ArchiveSystem.Models.csproj",
+      "msbuildProject": "../ArchiveSystem.Models/ArchiveSystem.Models.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "ArchiveSystem.Models >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\conta\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj": {
+              "projectPath": "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

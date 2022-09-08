@@ -10,6 +10,7 @@ namespace ArchiveSystem.Models.Dtos
     {
         public string Email { get; set; }
         public string Senha { get; set; }
+       // public bool? logado { get; set; }
 
     }
 }

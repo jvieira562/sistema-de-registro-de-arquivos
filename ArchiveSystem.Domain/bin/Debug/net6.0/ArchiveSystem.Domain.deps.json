@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "ArchiveSystem.Domain/1.0.0": {
+        "dependencies": {
+          "ArchiveSystem.Models": "1.0.0"
+        },
         "runtime": {
           "ArchiveSystem.Domain.dll": {}
+        }
+      },
+      "ArchiveSystem.Models/1.0.0": {
+        "runtime": {
+          "ArchiveSystem.Models.dll": {}
         }
       }
     }
   },
   "libraries": {
     "ArchiveSystem.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ArchiveSystem.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

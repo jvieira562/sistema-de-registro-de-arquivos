@@ -248,6 +248,4 @@ C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem\bin\Debug\n
 C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem\bin\Debug\net6.0\ArchiveSystem.Models.dll
 C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem\bin\Debug\net6.0\ArchiveSystem.Models.pdb
-C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem\bin\Debug\net6.0\ArchiveSystem.Domain.dll
-C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem\bin\Debug\net6.0\ArchiveSystem.Domain.pdb
 C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem\obj\Debug\net6.0\scopedcss\Views\Shared\_LayoutSemSessao.cshtml.rz.scp.css

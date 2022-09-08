@@ -13,5 +13,3 @@ C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Data\obj\De
 C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Data\bin\Debug\net6.0\ArchiveSystem.Models.dll
 C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Data\bin\Debug\net6.0\ArchiveSystem.Models.pdb
 C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Data\obj\Debug\net6.0\ArchiveSystem.Data.csproj.CopyComplete
-C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Data\bin\Debug\net6.0\ArchiveSystem.Domain.dll
-C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Data\bin\Debug\net6.0\ArchiveSystem.Domain.pdb

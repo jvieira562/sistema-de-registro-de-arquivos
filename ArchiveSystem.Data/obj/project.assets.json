@@ -211,22 +211,9 @@
           }
         }
       },
-      "ArchiveSystem.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/ArchiveSystem.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ArchiveSystem.Domain.dll": {}
-        }
-      },
       "ArchiveSystem.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "ArchiveSystem.Domain": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/ArchiveSystem.Models.dll": {}
         },
@@ -636,11 +623,6 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "ArchiveSystem.Domain/1.0.0": {
-      "type": "project",
-      "path": "../ArchiveSystem.Domain/ArchiveSystem.Domain.csproj",
-      "msbuildProject": "../ArchiveSystem.Domain/ArchiveSystem.Domain.csproj"
     },
     "ArchiveSystem.Models/1.0.0": {
       "type": "project",

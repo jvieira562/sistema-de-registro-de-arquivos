@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ArchiveSystem.Domain\ArchiveSystem.Domain.csproj" />
   </ItemGroup>
 
 </Project>

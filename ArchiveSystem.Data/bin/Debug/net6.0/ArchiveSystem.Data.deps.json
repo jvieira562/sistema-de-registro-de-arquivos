@@ -123,15 +123,7 @@
         }
       },
       "System.Security.Principal.Windows/4.7.0": {},
-      "ArchiveSystem.Domain/1.0.0": {
-        "runtime": {
-          "ArchiveSystem.Domain.dll": {}
-        }
-      },
       "ArchiveSystem.Models/1.0.0": {
-        "dependencies": {
-          "ArchiveSystem.Domain": "1.0.0"
-        },
         "runtime": {
           "ArchiveSystem.Models.dll": {}
         }
@@ -234,11 +226,6 @@
       "sha512": "sha512-ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ==",
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
-    },
-    "ArchiveSystem.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     },
     "ArchiveSystem.Models/1.0.0": {
       "type": "project",
