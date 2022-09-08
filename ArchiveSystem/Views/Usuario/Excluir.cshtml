@@ -1,0 +1,33 @@
+﻿@model ArchiveSystem.Models.Entidades.UsuarioModel
+
+@{
+    ViewData["Title"] = "Excluir";
+}
+
+<h1>Excluir</h1>
+
+<h4>Usuario: @Model.Nome</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Usuario" asp-action="Excluir" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label">@Model.Nome</label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sobrenome" class="control-label">@Model.Sobrenome</label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">@Model.Email</label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Excluir" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>

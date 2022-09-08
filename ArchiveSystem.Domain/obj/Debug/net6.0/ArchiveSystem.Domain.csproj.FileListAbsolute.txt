@@ -1,0 +1,12 @@
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Domain\bin\Debug\net6.0\ArchiveSystem.Domain.deps.json
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Domain\bin\Debug\net6.0\ArchiveSystem.Domain.dll
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Domain\bin\Debug\net6.0\ArchiveSystem.Domain.pdb
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Domain\obj\Debug\net6.0\ArchiveSystem.Domain.csproj.AssemblyReference.cache
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Domain\obj\Debug\net6.0\ArchiveSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Domain\obj\Debug\net6.0\ArchiveSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Domain\obj\Debug\net6.0\ArchiveSystem.Domain.AssemblyInfo.cs
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Domain\obj\Debug\net6.0\ArchiveSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Domain\obj\Debug\net6.0\ArchiveSystem.Domain.dll
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Domain\obj\Debug\net6.0\refint\ArchiveSystem.Domain.dll
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Domain\obj\Debug\net6.0\ArchiveSystem.Domain.pdb
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Domain\obj\Debug\net6.0\ref\ArchiveSystem.Domain.dll

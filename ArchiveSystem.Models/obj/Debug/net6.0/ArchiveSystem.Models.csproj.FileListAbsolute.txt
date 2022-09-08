@@ -1,0 +1,15 @@
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Models\bin\Debug\net6.0\ArchiveSystem.Models.deps.json
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Models\bin\Debug\net6.0\ArchiveSystem.Models.dll
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Models\bin\Debug\net6.0\ArchiveSystem.Models.pdb
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Models\obj\Debug\net6.0\ArchiveSystem.Models.csproj.AssemblyReference.cache
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Models\obj\Debug\net6.0\ArchiveSystem.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Models\obj\Debug\net6.0\ArchiveSystem.Models.AssemblyInfoInputs.cache
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Models\obj\Debug\net6.0\ArchiveSystem.Models.AssemblyInfo.cs
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Models\obj\Debug\net6.0\ArchiveSystem.Models.csproj.CoreCompileInputs.cache
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Models\obj\Debug\net6.0\ArchiveSystem.Models.dll
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Models\obj\Debug\net6.0\refint\ArchiveSystem.Models.dll
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Models\obj\Debug\net6.0\ArchiveSystem.Models.pdb
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Models\obj\Debug\net6.0\ref\ArchiveSystem.Models.dll
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Models\bin\Debug\net6.0\ArchiveSystem.Domain.dll
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Models\bin\Debug\net6.0\ArchiveSystem.Domain.pdb
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Models\obj\Debug\net6.0\ArchiveSystem.Models.csproj.CopyComplete
