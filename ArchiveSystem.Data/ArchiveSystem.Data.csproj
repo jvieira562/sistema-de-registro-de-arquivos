@@ -16,4 +16,8 @@
     <ProjectReference Include="..\ArchiveSystem.Models\ArchiveSystem.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Query\" />
+  </ItemGroup>
+
 </Project>

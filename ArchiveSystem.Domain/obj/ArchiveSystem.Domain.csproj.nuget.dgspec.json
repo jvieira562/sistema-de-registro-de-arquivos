@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Domain\\ArchiveSystem.Domain.csproj": {}
+    "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Domain\\ArchiveSystem.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Domain\\ArchiveSystem.Domain.csproj": {
+    "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Domain\\ArchiveSystem.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Domain\\ArchiveSystem.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Domain\\ArchiveSystem.Domain.csproj",
         "projectName": "ArchiveSystem.Domain",
-        "projectPath": "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Domain\\ArchiveSystem.Domain.csproj",
-        "packagesPath": "C:\\Users\\conta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Domain\\obj\\",
+        "projectPath": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Domain\\ArchiveSystem.Domain.csproj",
+        "packagesPath": "C:\\Users\\jvieira\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\conta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jvieira\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj": {
-                "projectPath": "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj"
+              "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj": {
+                "projectPath": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj"
               }
             }
           }
@@ -63,17 +63,17 @@
         }
       }
     },
-    "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj": {
+    "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj",
+        "projectUniqueName": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj",
         "projectName": "ArchiveSystem.Models",
-        "projectPath": "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj",
-        "packagesPath": "C:\\Users\\conta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Models\\obj\\",
+        "projectPath": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj",
+        "packagesPath": "C:\\Users\\jvieira\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\conta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jvieira\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
