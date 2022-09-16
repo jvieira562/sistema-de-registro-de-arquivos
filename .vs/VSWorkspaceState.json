@@ -1,12 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ArchiveSystem",
-    "\\ArchiveSystem.Data\\Repository",
-    "\\ArchiveSystem.Data\\UnitOfWork",
-    "\\ArchiveSystem\\Views",
-    "\\ArchiveSystem\\Views\\Usuario"
+    "\\ArchiveSystem"
   ],
-  "SelectedNode": "\\ArchiveSystem\\Views\\Usuario\\Excluir.cshtml",
+  "SelectedNode": "\\ArchiveSystem\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

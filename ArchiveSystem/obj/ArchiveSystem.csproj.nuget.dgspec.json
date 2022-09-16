@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem\\ArchiveSystem.csproj": {}
+    "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem\\ArchiveSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj": {
+    "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj",
+        "projectUniqueName": "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj",
         "projectName": "ArchiveSystem.Data",
-        "projectPath": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj",
+        "projectPath": "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj",
         "packagesPath": "C:\\Users\\jvieira\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Data\\obj\\",
         "projectStyle": "PackageReference",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj": {
-                "projectPath": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj"
+              "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj": {
+                "projectPath": "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj"
               }
             }
           }
@@ -77,12 +77,12 @@
         }
       }
     },
-    "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj": {
+    "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj",
+        "projectUniqueName": "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj",
         "projectName": "ArchiveSystem.Models",
-        "projectPath": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj",
+        "projectPath": "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj",
         "packagesPath": "C:\\Users\\jvieira\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Models\\obj\\",
         "projectStyle": "PackageReference",
@@ -132,14 +132,14 @@
         }
       }
     },
-    "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem\\ArchiveSystem.csproj": {
+    "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem\\ArchiveSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem\\ArchiveSystem.csproj",
+        "projectUniqueName": "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem\\ArchiveSystem.csproj",
         "projectName": "ArchiveSystem",
-        "projectPath": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem\\ArchiveSystem.csproj",
+        "projectPath": "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem\\ArchiveSystem.csproj",
         "packagesPath": "C:\\Users\\jvieira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem\\obj\\",
+        "outputPath": "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jvieira\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -156,8 +156,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj": {
-                "projectPath": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj"
+              "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj": {
+                "projectPath": "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj"
               }
             }
           }

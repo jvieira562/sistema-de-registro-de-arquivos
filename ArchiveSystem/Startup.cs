@@ -45,7 +45,7 @@ namespace ArchiveSystem
             app.UseSession();
             app.MapControllerRoute(
                 name: "default",    
-                pattern: "{controller=Login}/{action=Index}/{id?}");
+                pattern: "{controller=Usuario}/{action=Create}/{id?}");
         }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SLT/WDFTZm4xXWUATmDng7w5vSNXvh8BKOJ3nnhOgMaxOuiFruTaCcwL/O2yANW4chXFQ3pnHlCW8Ye4Wx2qiA==",
+  "dgSpecHash": "wW8NQU8SISXh+QzsKRljupL9jqqzRnDrTXkX2YniqwKknCZHNCRNNhFGThQCJzMHdBb1VOkfJrWP4il3+hyKxg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj",
+  "projectFilePath": "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jvieira\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\jvieira\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",

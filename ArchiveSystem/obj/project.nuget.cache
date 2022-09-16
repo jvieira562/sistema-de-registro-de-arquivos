@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oE8p6lIn5NEEP26gTcotKypIav2bihnkmIES8XQJcmm59QcmKMB01q4PnpqEq3PP5TjIvNETZkeIz69D8xso8A==",
+  "dgSpecHash": "8a3FB0K7/BaBt4ws0o5P8IvWQyAlOJ9/4Lvjt7qy4x1EHX5HTsXXL8BgSfKSV6jID8iM8RluyMVZ2NXMjexJcw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem\\ArchiveSystem.csproj",
+  "projectFilePath": "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem\\ArchiveSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jvieira\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\jvieira\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",

@@ -1,7 +1,7 @@
 ﻿@model ArchiveSystem.Models.Dtos.UsuarioLoginDto
 
 @{
-    Layout = "_LayoutSemSessao";
+    Layout = "_LayoutLogin";
     ViewData["Title"] = "Login";
 }
 @if (TempData["MenssagemErro"] != null)
@@ -16,7 +16,6 @@
     <div class="mb-3">
         <label for="email" class="form-label">Emails</label>
         <input asp-for="Email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
-        <>
     </div>
     
     <div class="mb-3">

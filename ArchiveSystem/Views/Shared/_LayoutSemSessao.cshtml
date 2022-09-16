@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,12 +12,46 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ArchiveSystem</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" asp-area="" asp-controller="Usuario" asp-action="Create">Teraflop</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
+           
+               <div class="row">
+
+                    <form asp-controller="Login" asp-action="Entrar" method="post">
+                        @model ArchiveSystem.Models.Entidades.UsuarioModel
+                        
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item">
+                                    @if (TempData["MenssagemErro"] != null)
+                                    {
+                                        <div class="alert alert-danger" role="alert">
+                                            <p style="font-size = 4">@TempData["MenssagemErro"]</p>
+                                        </div>
+                                    }
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark">Email </a>
+                                </li>
+                                <li class="nav-item">
+                                    <input asp-for="Email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="exemplo@email.com">
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark">Senha </a>
+                                </li>
+                                <li class="nav-item">
+                                    <input asp-for="Senha" type="password" class="form-control"  placeholder="Senha">
+                                </li>
+                                <li class="nav-item">
+                                    <button type="submit" class="btn btn-primary mb-3">Entrar</button>
+                                </li>
+                            </ul>
+
+                    </form>
+               </div>
         </nav>
     </header>
     <div class="container">
