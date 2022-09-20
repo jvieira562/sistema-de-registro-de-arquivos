@@ -1,4 +1,5 @@
-﻿using ArchiveSystem.Models.Entidades;
+﻿using ArchiveSystem.Dtos;
+using ArchiveSystem.Models.Entidades;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 namespace ArchiveSystem.LoginSessao
@@ -23,15 +24,21 @@ namespace ArchiveSystem.LoginSessao
             return JsonConvert.DeserializeObject<UsuarioModel>(sessao);
         }
 
-        public void CriarSessao(UsuarioModel usuario)            
+        public void CriarSessao(UsuarioModel usuarioModel)            
         {
-            string usuarioSerializado = JsonConvert.SerializeObject(usuario);
+            string usuarioSerializado = JsonConvert.SerializeObject(usuarioModel);
             _httpContext.HttpContext.Session.SetString("UsuarioLogado", usuarioSerializado);
         }   
 
         public void DestruirSessao()
         {
             _httpContext.HttpContext.Session.Remove("UsuarioLogado");
+        }
+
+        public void RenovarSessao(UsuarioModel usuarioModel)
+        {
+            DestruirSessao();
+            CriarSessao(usuarioModel);
         }
     }
 }

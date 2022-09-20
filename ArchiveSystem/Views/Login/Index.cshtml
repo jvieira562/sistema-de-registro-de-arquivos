@@ -1,17 +1,15 @@
-﻿@model ArchiveSystem.Models.Dtos.UsuarioLoginDto
+﻿@model ArchiveSystem.Dtos.UsuarioLoginDto
 
 @{
     Layout = "_LayoutLogin";
     ViewData["Title"] = "Login";
 }
-@if (TempData["MenssagemErro"] != null)
+@if (TempData["MenssagemStatusLogin"] != null)
 {
-    <div class="alert alert-danger" role = "alert">
-        <button type="button" class="btn btn-danger btn-sm close-alert" data-dismiss="alert" arial-label="Close">X</button>
-        @TempData["MenssagemErro"]
+    <div class="alert alert-danger" role="alert">
+        <p style="font-size = 4">@TempData["MenssagemStatusLogin"]</p>
     </div>
 }
-
 <form asp-controller="Login" asp-action="Entrar" method="post">
     <div class="mb-3">
         <label for="email" class="form-label">Emails</label>

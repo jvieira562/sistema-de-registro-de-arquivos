@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ArchiveSystem.Models.Entidades.ArquivoModel>
+@{
+    ViewData["Title"] = " Arquivos";
+}
+@if (TempData["MenssagemStatusArquivoErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <p style="font-size = 4">@TempData["MenssagemStatusSalvarErro"]</p>
+    </div>
+}
+@if (TempData["MenssagemStatusArquivoOk"] != null)
+{
+    <div class="alert alert-success" role="success">
+        <p style="font-size = 4">@TempData["MenssagemStatusArquivoOk"]</p>
+    </div>
+}
+<div class="container">
+
+    <form class="form-control" asp-action="SalvarArquivo" asp-controller="Arquivo" enctype="multipart/form-data" method="post">
+        <div class="align-items-end">
+            <input class="form-control" name="listaArquivos" type="file" id="formFileMultiple" multiple>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
+    </form>
+</div>
+<div class="container">
+    <h1>Meus arquivos</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Nome)</th>
+                <th>@Html.DisplayNameFor(model => model.Tipo)</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Tipo)</td>
+                    <td>
+                        <a asp-action="BuscarArquivo" asp-route-id="@item.Cod_Arquivo" target="_blank">Visualizar</a>
+                        <a asp-action="ApagarArquivo" asp-route-id="@item.Cod_Arquivo">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody >
+    </table>
+</div>

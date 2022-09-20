@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ArchiveSystem.Dtos\ArchiveSystem.Dtos.csproj" />
     <ProjectReference Include="..\ArchiveSystem.Models\ArchiveSystem.Models.csproj" />
   </ItemGroup>
 

@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "ArchiveSystem.Data/1.0.0": {
         "dependencies": {
+          "ArchiveSystem.Dtos": "1.0.0",
           "ArchiveSystem.Models": "1.0.0",
           "Dapper": "2.0.123",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
@@ -123,6 +124,14 @@
         }
       },
       "System.Security.Principal.Windows/4.7.0": {},
+      "ArchiveSystem.Dtos/1.0.0": {
+        "dependencies": {
+          "ArchiveSystem.Models": "1.0.0"
+        },
+        "runtime": {
+          "ArchiveSystem.Dtos.dll": {}
+        }
+      },
       "ArchiveSystem.Models/1.0.0": {
         "runtime": {
           "ArchiveSystem.Models.dll": {}
@@ -226,6 +235,11 @@
       "sha512": "sha512-ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ==",
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
+    },
+    "ArchiveSystem.Dtos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "ArchiveSystem.Models/1.0.0": {
       "type": "project",

@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "CommonServiceLocator/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {
+            "related": ".pdb;.XML"
+          }
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {
+            "related": ".pdb;.XML"
+          }
+        }
+      },
       "Dapper/2.0.123": {
         "type": "package",
         "compile": {
@@ -3208,10 +3221,23 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "XAct.Core.PCL/0.0.5014": {
+        "type": "package",
+        "dependencies": {
+          "CommonServiceLocator": "1.3.0"
+        },
+        "compile": {
+          "lib/portable-win+net45+sl50+wp80/XAct.Core.PCL.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+sl50+wp80/XAct.Core.PCL.dll": {}
+        }
+      },
       "ArchiveSystem.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "ArchiveSystem.Dtos": "1.0.0",
           "ArchiveSystem.Models": "1.0.0",
           "Dapper": "2.0.123",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
@@ -3222,6 +3248,35 @@
         },
         "runtime": {
           "bin/placeholder/ArchiveSystem.Data.dll": {}
+        }
+      },
+      "ArchiveSystem.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ArchiveSystem.Data": "1.0.0",
+          "ArchiveSystem.Dtos": "1.0.0",
+          "ArchiveSystem.Models": "1.0.0",
+          "XAct.Core.PCL": "0.0.5014"
+        },
+        "compile": {
+          "bin/placeholder/ArchiveSystem.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ArchiveSystem.Domain.dll": {}
+        }
+      },
+      "ArchiveSystem.Dtos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ArchiveSystem.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ArchiveSystem.Dtos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ArchiveSystem.Dtos.dll": {}
         }
       },
       "ArchiveSystem.Models/1.0.0": {
@@ -3237,6 +3292,20 @@
     }
   },
   "libraries": {
+    "CommonServiceLocator/1.3.0": {
+      "sha512": "fbjO0SNwbOFPdwVfyqv+B7gIJ2CVBOFPKqn1mDDECK7KER8jFaOdcvroFYoAHa0ktPbxi5s+15qOLnA96f8GSA==",
+      "type": "package",
+      "path": "commonservicelocator/1.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "commonservicelocator.1.3.0.nupkg.sha512",
+        "commonservicelocator.nuspec",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.XML",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.pdb"
+      ]
+    },
     "Dapper/2.0.123": {
       "sha512": "RDFF4rBLLmbpi6pwkY7q/M6UXHRJEOerplDGE5jwEkP/JGJnBauAClYavNKJPW1yOTWRPIyfj4is3EaJxQXILQ==",
       "type": "package",
@@ -9325,10 +9394,32 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "XAct.Core.PCL/0.0.5014": {
+      "sha512": "r0rX5Dzr0mfUp8FtVnxXlv5w+cXhz6tHfQ79lf6naLB92J+h2wkGw0q6CfOa2FiveN2ahSflf6LB2G1cOx43AQ==",
+      "type": "package",
+      "path": "xact.core.pcl/0.0.5014",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/portable-win+net45+sl50+wp80/XAct.Core.PCL.dll",
+        "xact.core.pcl.0.0.5014.nupkg.sha512",
+        "xact.core.pcl.nuspec"
+      ]
+    },
     "ArchiveSystem.Data/1.0.0": {
       "type": "project",
       "path": "../ArchiveSystem.Data/ArchiveSystem.Data.csproj",
       "msbuildProject": "../ArchiveSystem.Data/ArchiveSystem.Data.csproj"
+    },
+    "ArchiveSystem.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ArchiveSystem.Domain/ArchiveSystem.Domain.csproj",
+      "msbuildProject": "../ArchiveSystem.Domain/ArchiveSystem.Domain.csproj"
+    },
+    "ArchiveSystem.Dtos/1.0.0": {
+      "type": "project",
+      "path": "../ArchiveSystem.Dtos/ArchiveSystem.Dtos.csproj",
+      "msbuildProject": "../ArchiveSystem.Dtos/ArchiveSystem.Dtos.csproj"
     },
     "ArchiveSystem.Models/1.0.0": {
       "type": "project",
@@ -9339,23 +9430,24 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "ArchiveSystem.Data >= 1.0.0",
+      "ArchiveSystem.Domain >= 1.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.8"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jvieira\\.nuget\\packages\\": {}
+    "C:\\Users\\conta\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem\\ArchiveSystem.csproj",
+      "projectUniqueName": "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem\\ArchiveSystem.csproj",
       "projectName": "ArchiveSystem",
-      "projectPath": "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem\\ArchiveSystem.csproj",
-      "packagesPath": "C:\\Users\\jvieira\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem\\obj\\",
+      "projectPath": "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem\\ArchiveSystem.csproj",
+      "packagesPath": "C:\\Users\\conta\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jvieira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\conta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9369,8 +9461,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj": {
-              "projectPath": "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj"
+            "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj": {
+              "projectPath": "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj"
+            },
+            "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Domain\\ArchiveSystem.Domain.csproj": {
+              "projectPath": "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Domain\\ArchiveSystem.Domain.csproj"
             }
           }
         }
@@ -9412,5 +9507,27 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'CommonServiceLocator 1.3.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "CommonServiceLocator",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'XAct.Core.PCL 0.0.5014' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "XAct.Core.PCL",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

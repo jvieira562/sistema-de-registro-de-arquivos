@@ -1,24 +1,30 @@
-﻿using ArchiveSystem.Models;
-using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+﻿using Microsoft.AspNetCore.Mvc;
+using ArchiveSystem.LoginSessao;
+using ArchiveSystem.Models;
 
 namespace ArchiveSystem.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ISessao _sessao;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ISessao sessao)
         {
-            _logger = logger;
+            _sessao = sessao;
         }
         public IActionResult Index()
         {
-            return View();
+            if (_sessao.BuscarSessao() != null)
+            {
+                return RedirectToAction("Index", "Usuario");
+            }
+
+            return View("Index");
         }
 
         public IActionResult Privacy()
         {
+           
             return View();
         }
     }

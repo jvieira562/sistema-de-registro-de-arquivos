@@ -211,6 +211,19 @@
           }
         }
       },
+      "ArchiveSystem.Dtos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ArchiveSystem.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ArchiveSystem.Dtos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ArchiveSystem.Dtos.dll": {}
+        }
+      },
       "ArchiveSystem.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -624,6 +637,11 @@
         "version.txt"
       ]
     },
+    "ArchiveSystem.Dtos/1.0.0": {
+      "type": "project",
+      "path": "../ArchiveSystem.Dtos/ArchiveSystem.Dtos.csproj",
+      "msbuildProject": "../ArchiveSystem.Dtos/ArchiveSystem.Dtos.csproj"
+    },
     "ArchiveSystem.Models/1.0.0": {
       "type": "project",
       "path": "../ArchiveSystem.Models/ArchiveSystem.Models.csproj",
@@ -632,6 +650,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "ArchiveSystem.Dtos >= 1.0.0",
       "ArchiveSystem.Models >= 1.0.0",
       "Dapper >= 2.0.123",
       "Microsoft.Extensions.Configuration.Abstractions >= 6.0.0",
@@ -639,19 +658,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jvieira\\.nuget\\packages\\": {}
+    "C:\\Users\\conta\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj",
+      "projectUniqueName": "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj",
       "projectName": "ArchiveSystem.Data",
-      "projectPath": "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj",
-      "packagesPath": "C:\\Users\\jvieira\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jvieira\\Source\\Repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Data\\obj\\",
+      "projectPath": "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj",
+      "packagesPath": "C:\\Users\\conta\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jvieira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\conta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -665,8 +684,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj": {
-              "projectPath": "C:\\Users\\jvieira\\source\\repos\\jvieira562\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj"
+            "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Dtos\\ArchiveSystem.Dtos.csproj": {
+              "projectPath": "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Dtos\\ArchiveSystem.Dtos.csproj"
+            },
+            "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj": {
+              "projectPath": "C:\\Users\\conta\\Documents\\projetos\\csharp\\ArchiveSystem\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj"
             }
           }
         }

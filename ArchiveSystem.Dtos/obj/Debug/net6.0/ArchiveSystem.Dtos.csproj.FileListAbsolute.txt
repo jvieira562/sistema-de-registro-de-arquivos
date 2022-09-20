@@ -1,0 +1,15 @@
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Dtos\bin\Debug\net6.0\ArchiveSystem.Dtos.deps.json
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Dtos\bin\Debug\net6.0\ArchiveSystem.Dtos.dll
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Dtos\bin\Debug\net6.0\ArchiveSystem.Dtos.pdb
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Dtos\bin\Debug\net6.0\ArchiveSystem.Models.dll
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Dtos\bin\Debug\net6.0\ArchiveSystem.Models.pdb
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Dtos\obj\Debug\net6.0\ArchiveSystem.Dtos.csproj.AssemblyReference.cache
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Dtos\obj\Debug\net6.0\ArchiveSystem.Dtos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Dtos\obj\Debug\net6.0\ArchiveSystem.Dtos.AssemblyInfoInputs.cache
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Dtos\obj\Debug\net6.0\ArchiveSystem.Dtos.AssemblyInfo.cs
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Dtos\obj\Debug\net6.0\ArchiveSystem.Dtos.csproj.CoreCompileInputs.cache
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Dtos\obj\Debug\net6.0\ArchiveSystem.Dtos.csproj.CopyComplete
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Dtos\obj\Debug\net6.0\ArchiveSystem.Dtos.dll
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Dtos\obj\Debug\net6.0\refint\ArchiveSystem.Dtos.dll
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Dtos\obj\Debug\net6.0\ArchiveSystem.Dtos.pdb
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Dtos\obj\Debug\net6.0\ref\ArchiveSystem.Dtos.dll

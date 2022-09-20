@@ -1,5 +1,7 @@
-﻿using ArchiveSystem.Data.Repository;
+﻿using ArchiveSystem.Data.DbConnection;
+using ArchiveSystem.Data.Repository;
 using ArchiveSystem.Data.UnitOfWork;
+using ArchiveSystem.Domain.Regras;
 using ArchiveSystem.LoginSessao;
 
 namespace ArchiveSystem
@@ -15,18 +17,27 @@ namespace ArchiveSystem
 
         public void ConfigurationServices(IServiceCollection services)
         {
+            /**MVC**/
             services.AddControllersWithViews();
-            /**Unit Of Work**/
+
+            /**DATA**/
             services.AddScoped<DbSession>(); /**SINGLETON**/
+
+            /**UOW**/
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<UsuarioRepository>();
-            /**FIM**/
-            /**=================================**/
+            services.AddTransient<ArquivoRepository>();
+
             /**SESSÃO**/
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<ISessao, Sessao>();
             services.AddSession(o => { o.Cookie.HttpOnly = true; o.Cookie.IsEssential = true; });
-            /**FIM**/
+
+            /**USUARIO**/
+            services.AddScoped<UsuarioRegra>();
+
+            /**ARQUIVO**/
+            services.AddScoped<ArquivoRegra>();
         }
         public void Configure(WebApplication app, IWebHostEnvironment environment)
         {
@@ -45,7 +56,7 @@ namespace ArchiveSystem
             app.UseSession();
             app.MapControllerRoute(
                 name: "default",    
-                pattern: "{controller=Usuario}/{action=Create}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}");
         }
     }
 }

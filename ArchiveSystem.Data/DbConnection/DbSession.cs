@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static Dapper.SqlMapper;
 
-namespace ArchiveSystem.Data.UnitOfWork
+namespace ArchiveSystem.Data.DbConnection
 {
     public sealed class DbSession : IDisposable
     {
@@ -18,8 +18,8 @@ namespace ArchiveSystem.Data.UnitOfWork
 
         public DbSession()
         {
-            //Connection = new SqlConnection("Data Source=localhost; Initial Catalog=Test_ArchiveSystem; Integrated Security=True;");
-            Connection = new SqlConnection("Data Source = VNSRVWNDB003\\INSDEV; Initial Catalog = DevTest_jvieira; Integrated Security = True;"); //SQLDEV\INSDEV
+            Connection = new SqlConnection("Data Source=localhost; Initial Catalog=Test_ArchiveSystem; Integrated Security=True;");
+            //Connection = new SqlConnection("Data Source = VNSRVWNDB003\\INSDEV; Initial Catalog = DevTest_jvieira; Integrated Security = True;"); //SQLDEV\INSDEV
             Connection.Open();
         }
         public void Dispose()

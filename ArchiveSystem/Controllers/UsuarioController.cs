@@ -1,5 +1,6 @@
-﻿using ArchiveSystem.Data.Repository;
-using ArchiveSystem.Data.UnitOfWork;
+﻿using ArchiveSystem.Domain.Regras;
+using ArchiveSystem.Dtos;
+using ArchiveSystem.LoginSessao;
 using ArchiveSystem.Models.Entidades;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -8,55 +9,74 @@ namespace ArchiveSystem.Controllers
 {
     public class UsuarioController : Controller
     {
+        private readonly UsuarioRegra _usuarioRegra;
+        private readonly ISessao _sessao;
+
+        public UsuarioController(UsuarioRegra usuarioRegra, ISessao sessao)
+        {
+            _usuarioRegra = usuarioRegra;
+            _sessao = sessao;
+        }
         public ActionResult Index()
         {
             return View();
         }
-        public ActionResult Details(int? id)
+        public ActionResult Excluir()
         {
-            return View();
+            return View("Excluir", _sessao.BuscarSessao());
         }
-        public ActionResult Create()
+        public ActionResult Editar()
         {
-            return View();
+            return View("Editar", _sessao.BuscarSessao());
         }
-        public ActionResult Excluir([FromServices] UsuarioRepository repository, int id)
+        
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(UsuarioModel usuario)
         {
-            UsuarioModel usuario = repository.FindOne(id).FirstOrDefault();
-            return View(usuario);
-        }
-        public ActionResult Editar([FromServices] UsuarioRepository repository, int id)
-        {
-            UsuarioModel usuario = repository.FindOne(id).FirstOrDefault();
-            return View("Editar", usuario);
-        }
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                _usuarioRegra.SalvarUsuario(usuario);
+                } catch (Exception)
+                {
+                    TempData["MenssagemStatusUsuarioErro"] = $"Ocorreu um erro ao registrar sua conta.";
+                    return RedirectToAction("Index", "Home");
+                }
+                TempData["MenssagemStatusUsuarioOk"] = $"Conta criada com sucesso.";
+                return RedirectToAction("Index", "Login");
+            }
+            TempData["MenssagemStatusUsuarioErro"] = $"Ocorreu um erro ao registrar sua conta.";
+            return RedirectToAction("Index", "Home");
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([FromServices] IUnitOfWork uow, [FromServices] UsuarioRepository repository, UsuarioModel usuario)
-        {
-            uow.BeginTransaction();
-            repository.Create(usuario);
-            uow.Commit();
-            return RedirectToAction("Index", "Login");
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Editar([FromServices] IUnitOfWork uow, [FromServices] UsuarioRepository repository, UsuarioModel usuario)
+        public ActionResult Editar(UsuarioModel usuario)
         {
-            uow.BeginTransaction(); 
-            repository.Edit(usuario);
-            uow.Commit();
-            return RedirectToAction("Index", "Home");        
+            if (usuario != null)
+            {
+                _usuarioRegra.AtualizarUsuario(usuario);
+                _sessao.RenovarSessao(usuario);
+                TempData["MenssagemSucesso"] = $"Alteraçoes salvas com sucesso.";
+                return RedirectToAction("Index", "Usuario");   
+            }
+            TempData["MenssagemErro"] = $"Ocorreu um erro ao salvar aletaçoes na conta.";
+            return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Excluir([FromServices] IUnitOfWork uow, [FromServices] UsuarioRepository repository, int id)
+        public ActionResult Excluir(int id)
         {
-            uow.BeginTransaction();
-            repository.Excluir(id);
-            uow.Commit();
-            return RedirectToAction("Index", "Usuario");
+            if (id != null)
+            {
+                _usuarioRegra.ExcluirUsuario(id);
+                _sessao.DestruirSessao();
+                return RedirectToAction("Index", "Home");
+            }
+
+            return RedirectToAction("Excluir", "Usuario");
         }
 
     }

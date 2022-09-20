@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ArchiveSystem.Data\ArchiveSystem.Data.csproj" />
+    <ProjectReference Include="..\ArchiveSystem.Domain\ArchiveSystem.Domain.csproj" />
   </ItemGroup>
 
 </Project>

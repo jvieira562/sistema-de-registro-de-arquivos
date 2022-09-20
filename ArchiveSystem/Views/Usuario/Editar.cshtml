@@ -6,9 +6,6 @@
 
 <h1>Editar</h1>
 
-<h4>Usuario: @Model.Nome</h4>
-<h4>Tipo: @Model.Perfil</h4>
-<hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-controller="Usuario" asp-action="Editar" method="post">
@@ -28,13 +25,14 @@
                 <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <!--<div class="form-group">
                 <label asp-for="Senha" class="control-label"></label>
                 <input asp-for="Senha" class="form-control" />
                 <span asp-validation-for="Senha" class="text-danger"></span>
-            </div>
+            </div>-->
+            <br />
             <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <button class="btn btn-primary" type="submit" value="Editar">Salvat</button>
             </div>
         </form>
     </div>

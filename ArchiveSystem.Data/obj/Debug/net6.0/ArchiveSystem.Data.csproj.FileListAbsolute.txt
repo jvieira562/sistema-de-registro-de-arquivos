@@ -28,3 +28,5 @@ C:\Users\jvieira\Source\Repos\jvieira562\Files-Registration-System\ArchiveSystem
 C:\Users\jvieira\Source\Repos\jvieira562\Files-Registration-System\ArchiveSystem.Data\obj\Debug\net6.0\refint\ArchiveSystem.Data.dll
 C:\Users\jvieira\Source\Repos\jvieira562\Files-Registration-System\ArchiveSystem.Data\obj\Debug\net6.0\ArchiveSystem.Data.pdb
 C:\Users\jvieira\Source\Repos\jvieira562\Files-Registration-System\ArchiveSystem.Data\obj\Debug\net6.0\ref\ArchiveSystem.Data.dll
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Data\bin\Debug\net6.0\ArchiveSystem.Dtos.dll
+C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem.Data\bin\Debug\net6.0\ArchiveSystem.Dtos.pdb

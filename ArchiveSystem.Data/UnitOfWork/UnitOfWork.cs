@@ -1,4 +1,6 @@
-﻿namespace ArchiveSystem.Data.UnitOfWork
+﻿using ArchiveSystem.Data.DbConnection;
+
+namespace ArchiveSystem.Data.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {
