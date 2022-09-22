@@ -1,7 +1,7 @@
 ﻿using ArchiveSystem.Models.Enums;
 using System.Globalization;
 
-namespace ArchiveSystem.Dtos
+namespace ArchiveSystem.Dtos.Usuario
 {
     public class UsuarioLoginDto
     {

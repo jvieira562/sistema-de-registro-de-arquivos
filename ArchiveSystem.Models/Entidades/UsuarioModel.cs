@@ -9,7 +9,7 @@ namespace ArchiveSystem.Models.Entidades
             Perfil = (PerfilEnum)2;
         }
 
-        public int Cod_Usuario { get; set; }
+        public string? Cod_Usuario { get; set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public string Email { get; set; }

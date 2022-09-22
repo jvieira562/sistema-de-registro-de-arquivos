@@ -40,8 +40,9 @@
                     <td>@Html.DisplayFor(modelItem => item.Nome)</td>
                     <td>@Html.DisplayFor(modelItem => item.Tipo)</td>
                     <td>
-                        <a asp-action="BuscarArquivo" asp-route-id="@item.Cod_Arquivo" target="_blank">Visualizar</a>
-                        <a asp-action="ApagarArquivo" asp-route-id="@item.Cod_Arquivo">Excluir</a>
+                        <a asp-action="VisualizarArquivo" asp-route-id="@item.Cod_Arquivo" target="_blank">Visualizar</a>
+                        <a asp-action="DownloadArquivo" asp-route-id="@item.Cod_Arquivo" target="_blank">Download</a>
+                        <a asp-action="ExcluirArquivo" asp-route-id="@item.Cod_Arquivo">Excluir</a>
                     </td>
                 </tr>
             }

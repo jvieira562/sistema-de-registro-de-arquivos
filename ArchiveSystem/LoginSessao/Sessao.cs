@@ -1,4 +1,5 @@
 ﻿using ArchiveSystem.Dtos;
+using ArchiveSystem.Dtos.Usuario;
 using ArchiveSystem.Models.Entidades;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
@@ -11,6 +12,17 @@ namespace ArchiveSystem.LoginSessao
         public Sessao(IHttpContextAccessor httpContext)
         {
             _httpContext = httpContext;
+        }
+
+        public UsuarioArquivoDto BuscarIdUsuarioLogado()
+        {
+            string sessao = _httpContext.HttpContext.Session.GetString("UsuarioLogado");
+
+            if (string.IsNullOrEmpty(sessao))
+            {
+                return null;
+            }
+            return JsonConvert.DeserializeObject<UsuarioArquivoDto>(sessao);
         }
 
         public UsuarioModel BuscarSessao()

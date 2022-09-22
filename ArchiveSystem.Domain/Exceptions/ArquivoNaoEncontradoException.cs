@@ -15,11 +15,11 @@ namespace ArchiveSystem.Domain.Exceptions
 
         public ArquivoNaoEncontradoException(string message, Exception inner) : base(message, inner) { }
 
-        public string NomeArquivo { get; }
+        public string Mensagem { get; }
 
         public ArquivoNaoEncontradoException(string message, string nomeArquivo) : this(message)
         {
-            NomeArquivo = nomeArquivo;
+            Mensagem = message;
         }
     }
 }

@@ -1,5 +1,5 @@
-﻿using ArchiveSystem.Domain.Regras;
-using ArchiveSystem.Dtos;
+﻿using ArchiveSystem.Domain.Regras.Usuario;
+using ArchiveSystem.Dtos.Usuario;
 using ArchiveSystem.LoginSessao;
 using ArchiveSystem.Models.Entidades;
 using Microsoft.AspNetCore.Http;
@@ -67,11 +67,11 @@ namespace ArchiveSystem.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Excluir(int id)
+        public ActionResult Excluir(string cod_Usuario)
         {
-            if (id != null)
+            if (!string.IsNullOrEmpty(cod_Usuario))
             {
-                _usuarioRegra.ExcluirUsuario(id);
+                _usuarioRegra.ExcluirUsuario(cod_Usuario);
                 _sessao.DestruirSessao();
                 return RedirectToAction("Index", "Home");
             }

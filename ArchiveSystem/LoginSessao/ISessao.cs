@@ -1,4 +1,5 @@
 ﻿using ArchiveSystem.Dtos;
+using ArchiveSystem.Dtos.Usuario;
 using ArchiveSystem.Models.Entidades;
 
 namespace ArchiveSystem.LoginSessao
@@ -9,6 +10,6 @@ namespace ArchiveSystem.LoginSessao
         void DestruirSessao();
         UsuarioModel BuscarSessao();
         void RenovarSessao(UsuarioModel usuarioModel);
-
+        UsuarioArquivoDto BuscarIdUsuarioLogado();
     }
 }

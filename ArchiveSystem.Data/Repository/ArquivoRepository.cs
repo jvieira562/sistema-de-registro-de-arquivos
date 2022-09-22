@@ -1,4 +1,5 @@
 ﻿using ArchiveSystem.Data.DbConnection;
+using ArchiveSystem.Dtos.Usuario;
 using ArchiveSystem.Models.Entidades;
 using Dapper;
 
@@ -13,38 +14,74 @@ namespace ArchiveSystem.Data.Repository
             _session = session;
         }
 
-        public bool SalvarArquivo(ArquivoModel arquivo, UsuarioModel usuario)
+        public bool SalvarArquivo(ArquivoModel arquivo, string cod_Usuario)
         {
-            if (arquivo != null & usuario.Cod_Usuario != null)
+            int linhasAfetadas = 
+                _session.Connection.Execute(
+                @"INSERT INTO [arquivo]
+                    (Cod_Arquivo,
+                     Nome,
+                     Conteudo,
+                     Tipo,
+                     Cod_usuario)
+                VALUES(@Cod_Arquivo,
+                     @Nome,
+                     @Conteudo,
+                     @Tipo,
+                     @Cod_Usuario) ",
+                new { Cod_Arquivo = arquivo.Cod_Arquivo,
+                    Nome = arquivo.Nome,
+                    Conteudo = arquivo.Conteudo,
+                    Tipo = arquivo.Tipo,
+                    Cod_Usuario = cod_Usuario},
+                    _session.Transaction);
+            if (linhasAfetadas > 0)
             {
-            _session.Connection.Execute("INSERT INTO [Arquivo] (Nome, Conteudo, Tipo, fk_Cod_Usuario)" +
-                "VALUES (@Nome, @Conteudo, @Tipo, @fk_Cod_Usuario)",
-                new { Nome = arquivo.Nome, Conteudo = arquivo.Conteudo, Tipo = arquivo.Tipo, fk_Cod_Usuario = usuario.Cod_Usuario}, _session.Transaction);
-            return true;                                    
+                return true;
             }
-            return false;
+            else
+            {
+                return false;
+            }                                                
         }
-        public bool ExcluirArquivo(int cod_Arquivo)
+        public bool ExcluirArquivo(string cod_Arquivo, string cod_Usuario)
         {
-            if (cod_Arquivo != null)
+            int linhasAfetadas = _session.Connection.Execute(
+                @"DELETE FROM [arquivo]
+                WHERE  Cod_arquivo = @cod_Arquivo
+                       AND Cod_usuario = @cod_Usuario ",
+                new { Cod_Arquivo = cod_Arquivo, Cod_Usuario = cod_Usuario },
+                _session.Transaction);            
+            
+            if (linhasAfetadas > 0)
             {
-            _session.Connection.Execute("DELETE FROM [Arquivo] WHERE Cod_Arquivo = @Cod_Arquivo",
-                new { Cod_Arquivo = cod_Arquivo }, _session.Transaction);
-            return true;
+                return true;
             }
-            return false;
+            else
+            {
+                return false;
+            }
         }
-        public IEnumerable<ArquivoModel> ListarAquivos(int cod_Usuario)
+        public ArquivoModel BuscarArquivo(string cod_Arquivo, string cod_Usuario)
+        {
+            return _session.Connection.QueryFirstOrDefault<ArquivoModel>(
+                @"SELECT *
+                FROM   [arquivo]
+                WHERE  cod_arquivo = @cod_Arquivo
+                       AND cod_usuario = @cod_Usuario",
+                new { Cod_Arquivo = cod_Arquivo, Cod_Usuario = cod_Usuario });
+        }
+        public IEnumerable<ArquivoModel> ListarAquivos(string cod_Usuario)
         {
             return _session.Connection.Query<ArquivoModel>(
-                "SELECT * FROM [Arquivo] WHERE fk_Cod_Usuario = @cod_Usuario",
-                new { cod_Usuario = cod_Usuario }).ToList();
+                @"SELECT *
+                FROM   [Arquivo]
+                WHERE  Cod_Usuario = @cod_Usuario",
+                new { Cod_Usuario = cod_Usuario }).ToList();
         }
-        public ArquivoModel BuscarArquivoAtravesDoId(int? cod_Arquivo)
+        private int QuantidadeDeLinhasAfetadas(int linhasAfetadas)
         {
-            return _session.Connection.Query<ArquivoModel>(
-                "SELECT * FROM [Arquivo] WHERE Cod_Arquivo = @cod_Arquivo",
-                new { cod_Arquivo = cod_Arquivo }).First();
+            return linhasAfetadas;
         }
     }
 }

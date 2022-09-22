@@ -1,7 +1,8 @@
 ﻿using ArchiveSystem.Data.DbConnection;
 using ArchiveSystem.Data.Repository;
 using ArchiveSystem.Data.UnitOfWork;
-using ArchiveSystem.Domain.Regras;
+using ArchiveSystem.Domain.Regras.Arquivo;
+using ArchiveSystem.Domain.Regras.Usuario;
 using ArchiveSystem.LoginSessao;
 
 namespace ArchiveSystem

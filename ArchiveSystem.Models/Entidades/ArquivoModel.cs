@@ -12,7 +12,7 @@ namespace ArchiveSystem.Models.Entidades
         public string Nome { get; set; }
         public byte[] Conteudo { get; set; }
         public string Tipo { get; set; }
-        public int fk_Cod_Usuario { get; set; }
+        public string Cod_Usuario { get; set; }
 
 
     }

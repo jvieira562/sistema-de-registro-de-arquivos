@@ -1,10 +1,13 @@
-﻿using ArchiveSystem.Domain.Regras;
+﻿using ArchiveSystem.Domain.Exceptions;
+using ArchiveSystem.Domain.Regras.Arquivo;
+using ArchiveSystem.Dtos.Usuario;
 using ArchiveSystem.LoginSessao;
 using ArchiveSystem.Models.Entidades;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Routing;
 using System.Configuration;
+using XAct;
 
 namespace ArchiveSystem.Controllers
 {
@@ -12,27 +15,32 @@ namespace ArchiveSystem.Controllers
     {
         private readonly ArquivoRegra _arquivoRegra;
         private readonly ISessao _sessao;
+
         public ArquivoController(ArquivoRegra arquivoRegra, ISessao sessao)
         {
             _arquivoRegra = arquivoRegra;
             _sessao = sessao;
         }
 
-        public IActionResult Index(UsuarioModel usuario)
+        public IActionResult Index(UsuarioArquivoDto usuario)
         {
-            usuario = _sessao.BuscarSessao();
+            usuario = _sessao.BuscarIdUsuarioLogado();
 
             if (usuario != null)
             {
-                return View(_arquivoRegra.ListarArquivos(usuario.Cod_Usuario));
+                return View(_arquivoRegra.ListarArquivos(usuario));
             }
             return RedirectToAction("Index", "Home");
             
         }
+        public IActionResult NotFound()
+        {
+            return View();
+        }
         [HttpPost]
         public IActionResult SalvarArquivo(IList<IFormFile> listaArquivos)
         {
-            UsuarioModel usuario = _sessao.BuscarSessao();
+            UsuarioArquivoDto usuario = _sessao.BuscarIdUsuarioLogado();
 
             if (ModelState.IsValid)
             {
@@ -47,7 +55,7 @@ namespace ArchiveSystem.Controllers
                         Nome = file.FileName,
                         Conteudo = ms.ToArray(),
                         Tipo = file.ContentType,
-                        fk_Cod_Usuario = usuario.Cod_Usuario
+                        Cod_Usuario = usuario.Cod_Usuario
                     };
                     _arquivoRegra.SalvarArquivo(arquivo, usuario);
                 }
@@ -57,30 +65,75 @@ namespace ArchiveSystem.Controllers
             TempData["MenssagemStatusArquivoErro"] = $"Ocorreu um erro ao salvar seus arquivos.";
             return RedirectToAction("Index", "Usuario");
         }
-        [HttpGet("BuscarArquivo/{id}")]
-        public IActionResult BuscarArquivo(int? id)
+        [HttpGet("Visualizar/{id}")]
+        public IActionResult VisualizarArquivo(string? id, UsuarioArquivoDto usuario)
         {
-            if (id == null | id == 0)
-            {
-            return NotFound(RedirectToAction("Index", "Usuario"));
-            }
+            usuario = _sessao.BuscarIdUsuarioLogado();
+            ArquivoModel arquivo = _arquivoRegra.BuscarArquivo(id, usuario);
 
-            ArquivoModel arquivo =  _arquivoRegra.BuscarArquivoAtravesDoId(id);
-            return File(arquivo.Conteudo, arquivo.Tipo, arquivo.Nome);
-        }
-        [HttpGet("ApagarArquivo/{id}")]
-        public IActionResult ApagarArquivo(int id)
-        {
-            ArquivoModel arquivo = _arquivoRegra.BuscarArquivoAtravesDoId(id);
-            if (id == null | id == 0)
+            try
             {
-                TempData["MenssagemStatusArquivoErro"] = $"Não foi possivel apagar <b>" + arquivo.Nome.ToUpper() + "<b>.";
-                NotFound(RedirectToAction("Index", "Arquivo"));
+                return File(arquivo.Conteudo, arquivo.Tipo);
             }
-            
-            TempData["MenssagemStatusArquivoOk"] = $"Arquivo " + arquivo.Nome.ToUpper() + " foi apagado com sucesso.";
-            _arquivoRegra.ExcluirArquivo(id);
+            catch (Exception)
+            {
+                return RedirectToAction("NotFound", "Arquivo");
+            }            
+        }
+        [HttpGet("Download/{id}")]
+        public IActionResult DownloadArquivo(string? id, UsuarioArquivoDto usuario)
+        {
+            if (TaLogado())
+            {
+                usuario = _sessao.BuscarIdUsuarioLogado();
+                ArquivoModel arquivo = _arquivoRegra.BuscarArquivo(id, usuario);
+                if (arquivo.IsNull())
+                {
+                    TempData["MenssagemStatusArquivoErro"] = $"O Arquivo com códido " + id + " não foi encontrado!";
+                    return RedirectToAction("NotFound", "Arquivo");
+                }
+                return File(arquivo.Conteudo, arquivo.Tipo, arquivo.Nome);
+            }
+            else
+            {
+                return RedirectToAction("Index", "Login");
+            }
+        }
+        [HttpGet("Excluir/{id}")]
+        public IActionResult ExcluirArquivo(string id, UsuarioArquivoDto usuario)
+        {
+            if (TaLogado())
+            {
+            usuario = _sessao.BuscarIdUsuarioLogado();
+            ArquivoModel arquivo = _arquivoRegra.BuscarArquivo(id, usuario);
+
+            if (!string.IsNullOrEmpty(id) & usuario != null)
+            {
+                bool status = _arquivoRegra.ExcluirArquivo(id, usuario);
+
+                if (status)
+                {
+                    TempData["MenssagemStatusArquivoOk"] = $"Arquivo " + arquivo.Nome + " foi apagado com sucesso.";
+                }
+                else
+                {
+                    TempData["MenssagemStatusArquivoErro"] = $"Não foi possivel apagar " + arquivo.Nome + ".";
+                }
+            }
             return RedirectToAction("Index", "Arquivo");
+            } else
+            {
+            return RedirectToAction("Index", "Login");
+            }
+        }
+        private bool TaLogado()
+        {
+            if (_sessao.BuscarSessao().IsNull())
+            {
+                return false;
+            }
+            return true;
         }
     }
-}
+}                 
+

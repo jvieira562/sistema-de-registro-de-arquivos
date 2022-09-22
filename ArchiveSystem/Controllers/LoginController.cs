@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ArchiveSystem.LoginSessao;
-using ArchiveSystem.Dtos;
-using ArchiveSystem.Domain.Regras;
+using ArchiveSystem.Dtos.Usuario;
 using ArchiveSystem.Models.Entidades;
+using ArchiveSystem.Domain.Regras.Usuario;
 
 namespace ArchiveSystem.Controllers
 {

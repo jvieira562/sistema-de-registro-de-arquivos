@@ -1,11 +1,12 @@
 ﻿using ArchiveSystem.Data.Repository;
 using ArchiveSystem.Data.UnitOfWork;
-using ArchiveSystem.Dtos;
+using ArchiveSystem.Dtos.Usuario;
 using ArchiveSystem.Models.Entidades;
 using System.Text;
+using XAct;
 using XSystem.Security.Cryptography;
 
-namespace ArchiveSystem.Domain.Regras
+namespace ArchiveSystem.Domain.Regras.Usuario
 {
     public class UsuarioRegra
     {
@@ -43,7 +44,7 @@ namespace ArchiveSystem.Domain.Regras
         }
         public bool AtualizarUsuario(UsuarioModel usuario)
         {
-            _se
+
             if (usuario != null)
             {
                 _uow.BeginTransaction();
@@ -59,15 +60,14 @@ namespace ArchiveSystem.Domain.Regras
             return _repository.FindOne(email);
         }
 
-        public bool ExcluirUsuario(int id)
+        public bool ExcluirUsuario(string cod_Usuario)
         {
-
-            if(id != null)
+            if (!string.IsNullOrEmpty(cod_Usuario))
             {
-            _uow.BeginTransaction();
-            _repository.Excluir(id);
-            _uow.Commit();
-            return true;
+                _uow.BeginTransaction();
+                _repository.Excluir(cod_Usuario);
+                _uow.Commit();
+                return true;
             }
             return false;
         }

@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "_LayoutLogin";
+    ViewData["Title"] = " NotFound";
+}
+
+<div class="page-wrap d-flex flex-row align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <span class="display-1 d-block">404</span>
+                <div>
+                    <p class="fs-3"> <span class="text-danger">Opps!</span> Não encontrado.</p>
+                    <p class="lead">
+                        A Item que você está procurando não existe.
+                    </p>
+                    @if (TempData["MenssagemStatusArquivoErro"] != null)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            <p style="font-size = 4">@TempData["MenssagemStatusArquivoErro"]</p>
+                        </div>
+                    }
+                    <a asp-controller="Arquivo" asp-action="Index" class="btn btn-primary">Voltar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
