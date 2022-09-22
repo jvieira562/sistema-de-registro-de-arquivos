@@ -4,6 +4,7 @@ using ArchiveSystem.LoginSessao;
 using ArchiveSystem.Models.Entidades;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using XAct;
 
 namespace ArchiveSystem.Controllers
 {
@@ -55,6 +56,7 @@ namespace ArchiveSystem.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Editar(UsuarioModel usuario)
         {
+            usuario = _sessao.BuscarSessao();
             if (usuario != null)
             {
                 _usuarioRegra.AtualizarUsuario(usuario);
@@ -67,11 +69,12 @@ namespace ArchiveSystem.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Excluir(string cod_Usuario)
+        public ActionResult Excluir(UsuarioArquivoDto usuarioArquivoDto)
         {
-            if (!string.IsNullOrEmpty(cod_Usuario))
+            usuarioArquivoDto = _sessao.BuscarIdUsuarioLogado();
+            if (!usuarioArquivoDto.IsNull())
             {
-                _usuarioRegra.ExcluirUsuario(cod_Usuario);
+                _usuarioRegra.ExcluirUsuario(usuarioArquivoDto);
                 _sessao.DestruirSessao();
                 return RedirectToAction("Index", "Home");
             }

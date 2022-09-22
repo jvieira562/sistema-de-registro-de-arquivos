@@ -1,7 +1,12 @@
 ﻿@{
     ViewData["Title"] = "Home";
 }
-
+@if (TempData["MenssagemSucessos"] != null)
+{
+    <div class="alert alert-success" role="success">
+        <p style="font-size = 4">@TempData["MenssagemStatusArquivoOk"]</p>
+    </div>
+}
 <div class="text-center">
     <h1 class="display-4">Usuario Index</h1>
     <p>Em desenvolvimento.</p>

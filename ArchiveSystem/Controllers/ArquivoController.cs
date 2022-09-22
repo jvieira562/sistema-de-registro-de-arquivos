@@ -40,7 +40,9 @@ namespace ArchiveSystem.Controllers
         [HttpPost]
         public IActionResult SalvarArquivo(IList<IFormFile> listaArquivos)
         {
+            
             UsuarioArquivoDto usuario = _sessao.BuscarIdUsuarioLogado();
+            long tamanho = listaArquivos.Sum(a => a.Length);
 
             if (ModelState.IsValid)
             {
@@ -55,11 +57,12 @@ namespace ArchiveSystem.Controllers
                         Nome = file.FileName,
                         Conteudo = ms.ToArray(),
                         Tipo = file.ContentType,
+                        Tamanho = (file.Length),
                         Cod_Usuario = usuario.Cod_Usuario
                     };
                     _arquivoRegra.SalvarArquivo(arquivo, usuario);
                 }
-                TempData["MenssagemStatusArquivoOk"] = $"Arquivos salvos com sucesso.";
+                TempData["MenssagemStatusArquivoOk"] = $"{listaArquivos.Count()} arquivos salvos com sucesso, com tamanho total de : {tamanho} Bytes.";
                 return RedirectToAction("Index", "Arquivo");
             }
             TempData["MenssagemStatusArquivoErro"] = $"Ocorreu um erro ao salvar seus arquivos.";

@@ -47,14 +47,14 @@ namespace ArchiveSystem.Data.Repository
         }
         public void Edit(UsuarioModel usuario)
         {
-            _session.Connection.Execute(
+            int linhasAfetadas = _session.Connection.Execute(
                 @"UPDATE [usuario]
-                SET    nome = @Nome,
-                       sobrenome = @Sobrenome,
-                       email = @Email,
-                       senha = @Senha,
-                       perfil = @Perfil
-                WHERE  cod_usuario = @Cod_Usuario; ",
+                SET    Nome = @Nome,
+                       Sobrenome = @Sobrenome,
+                       Email = @Email,
+                       Senha = @Senha,
+                       Perfil = @Perfil
+                WHERE  Cod_usuario = @Cod_Usuario; ",
                 new { Nome = usuario.Nome,
                     Sobrenome = usuario.Sobrenome,
                     Email = usuario.Email,
@@ -62,6 +62,7 @@ namespace ArchiveSystem.Data.Repository
                     Perfil = usuario.Perfil,
                     Cod_Usuario = usuario.Cod_Usuario},
             _session.Transaction);
+            Console.WriteLine($"LINHAS AFETADAS: {linhasAfetadas}");
         }
         public UsuarioModel FindOne(string email)
         {

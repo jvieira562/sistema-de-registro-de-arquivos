@@ -19,7 +19,7 @@
     <form class="form-control" asp-action="SalvarArquivo" asp-controller="Arquivo" enctype="multipart/form-data" method="post">
         <div class="align-items-end">
             <input class="form-control" name="listaArquivos" type="file" id="formFileMultiple" multiple>
-            <button type="submit" class="btn btn-primary">Salvar</button>
+            <button type="submit" class="btn btn-primary">Upload</button>
         </div>
     </form>
 </div>
@@ -30,15 +30,33 @@
             <tr>
                 <th>@Html.DisplayNameFor(model => model.Nome)</th>
                 <th>@Html.DisplayNameFor(model => model.Tipo)</th>
+                <th>@Html.DisplayNameFor(model => model.Tamanho)</th>
                 <th>Ações</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
+                double t = item.Tamanho / 1024;
+                string[] opcoes = { "KB", "MB", "GB" };
+                string unidadeDeMedida = "";
+                if(t < 1024)
+                {
+                    unidadeDeMedida = opcoes[0];
+                }
+                else if ((t >= 1024) & (t < (1.048576 *(Math.Pow(10, 6)))))
+                {
+                    t = (t / 1024);
+                    unidadeDeMedida = opcoes[1];
+                }
+                else if (t >= (1.048576 * (Math.Pow(10, 6))))
+                {
+                    unidadeDeMedida = opcoes[2];
+                }
                 <tr>
-                    <td>@Html.DisplayFor(modelItem => item.Nome)</td>
-                    <td>@Html.DisplayFor(modelItem => item.Tipo)</td>
+                    <td>@item.Nome</td>
+                    <td>@item.Tipo</td>
+                    <td>@t.ToString("F") @unidadeDeMedida</td>
                     <td>
                         <a asp-action="VisualizarArquivo" asp-route-id="@item.Cod_Arquivo" target="_blank">Visualizar</a>
                         <a asp-action="DownloadArquivo" asp-route-id="@item.Cod_Arquivo" target="_blank">Download</a>

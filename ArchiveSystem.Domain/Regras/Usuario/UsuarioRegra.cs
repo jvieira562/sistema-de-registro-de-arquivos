@@ -12,6 +12,7 @@ namespace ArchiveSystem.Domain.Regras.Usuario
     {
         private readonly IUnitOfWork _uow;
         private readonly UsuarioRepository _repository;
+        Criptografia _criptografia = new Criptografia();
 
         public UsuarioRegra(IUnitOfWork uow, UsuarioRepository repository)
         {
@@ -21,7 +22,7 @@ namespace ArchiveSystem.Domain.Regras.Usuario
 
         public bool ValidaLogin(UsuarioLoginDto usuarioDto)
         {
-            usuarioDto.Senha = CriptografaSenha(usuarioDto.Senha);
+            usuarioDto.Senha = _criptografia.TransformaEmHash(usuarioDto.Senha);
             if (_repository.BuscarLogin(usuarioDto) != null)
             {
                 return true;
@@ -34,7 +35,7 @@ namespace ArchiveSystem.Domain.Regras.Usuario
         {
             if (usuario != null)
             {
-                usuario.Senha = CriptografaSenha(usuario.Senha);
+                usuario.Senha = _criptografia.TransformaEmHash(usuario.Senha);
                 _uow.BeginTransaction();
                 _repository.Create(usuario);
                 _uow.Commit();
@@ -60,22 +61,16 @@ namespace ArchiveSystem.Domain.Regras.Usuario
             return _repository.FindOne(email);
         }
 
-        public bool ExcluirUsuario(string cod_Usuario)
+        public bool ExcluirUsuario(UsuarioArquivoDto usuarioArquivoDto)
         {
-            if (!string.IsNullOrEmpty(cod_Usuario))
+            if (!usuarioArquivoDto.IsNull())
             {
                 _uow.BeginTransaction();
-                _repository.Excluir(cod_Usuario);
+                _repository.Excluir(usuarioArquivoDto.Cod_Usuario);
                 _uow.Commit();
                 return true;
             }
             return false;
-        }
-        private string CriptografaSenha(string senha)
-        {
-            var hashmd5 = new MD5CryptoServiceProvider();
-            byte[] senhaCriptografada = Encoding.UTF8.GetBytes(senha);
-            return Convert.ToBase64String(senhaCriptografada);
         }
     }
 }

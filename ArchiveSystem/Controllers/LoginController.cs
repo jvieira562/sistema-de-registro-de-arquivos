@@ -16,7 +16,6 @@ namespace ArchiveSystem.Controllers
             _usuarioRegra = usuarioRegra;
             _sessao = sessao;
         }
-
         public IActionResult Index()
         {
             if (_sessao.BuscarSessao() != null)
@@ -25,7 +24,6 @@ namespace ArchiveSystem.Controllers
             }
             return View();
         }
-
         [HttpPost]
         public IActionResult Entrar(UsuarioLoginDto loginDto)
         {

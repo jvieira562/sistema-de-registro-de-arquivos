@@ -1,5 +1,4 @@
 ﻿using ArchiveSystem.Data.DbConnection;
-using ArchiveSystem.Dtos.Usuario;
 using ArchiveSystem.Models.Entidades;
 using Dapper;
 
@@ -20,19 +19,22 @@ namespace ArchiveSystem.Data.Repository
                 _session.Connection.Execute(
                 @"INSERT INTO [arquivo]
                     (Cod_Arquivo,
-                     Nome,
-                     Conteudo,
-                     Tipo,
-                     Cod_usuario)
+                    Nome,
+                    Conteudo,
+                    Tipo,
+                    Tamanho,
+                    Cod_usuario)
                 VALUES(@Cod_Arquivo,
-                     @Nome,
-                     @Conteudo,
-                     @Tipo,
-                     @Cod_Usuario) ",
+                    @Nome,
+                    @Conteudo,
+                    @Tipo,
+                    @Tamanho,
+                    @Cod_Usuario) ",
                 new { Cod_Arquivo = arquivo.Cod_Arquivo,
                     Nome = arquivo.Nome,
                     Conteudo = arquivo.Conteudo,
                     Tipo = arquivo.Tipo,
+                    Tamanho = arquivo.Tamanho,
                     Cod_Usuario = cod_Usuario},
                     _session.Transaction);
             if (linhasAfetadas > 0)

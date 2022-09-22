@@ -8,69 +8,69 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ArchiveSystem
 build_property.RootNamespace = ArchiveSystem
-build_property.ProjectDir = C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem\
+build_property.ProjectDir = C:\Users\jvieira\Documents\projects\csharp\Files-Registration-System\ArchiveSystem\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\conta\Documents\projetos\csharp\ArchiveSystem\ArchiveSystem
+build_property.MSBuildProjectDirectory = C:\Users\jvieira\Documents\projects\csharp\Files-Registration-System\ArchiveSystem
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/conta/Documents/projetos/csharp/ArchiveSystem/ArchiveSystem/Views/Arquivo/Index.cshtml]
+[C:/Users/jvieira/Documents/projects/csharp/Files-Registration-System/ArchiveSystem/Views/Arquivo/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJxdWl2b1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/conta/Documents/projetos/csharp/ArchiveSystem/ArchiveSystem/Views/Arquivo/NotFound.cshtml]
+[C:/Users/jvieira/Documents/projects/csharp/Files-Registration-System/ArchiveSystem/Views/Arquivo/NotFound.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJxdWl2b1xOb3RGb3VuZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/conta/Documents/projetos/csharp/ArchiveSystem/ArchiveSystem/Views/Home/Index.cshtml]
+[C:/Users/jvieira/Documents/projects/csharp/Files-Registration-System/ArchiveSystem/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/conta/Documents/projetos/csharp/ArchiveSystem/ArchiveSystem/Views/Home/Privacy.cshtml]
+[C:/Users/jvieira/Documents/projects/csharp/Files-Registration-System/ArchiveSystem/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/conta/Documents/projetos/csharp/ArchiveSystem/ArchiveSystem/Views/Login/Index.cshtml]
+[C:/Users/jvieira/Documents/projects/csharp/Files-Registration-System/ArchiveSystem/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/conta/Documents/projetos/csharp/ArchiveSystem/ArchiveSystem/Views/Shared/Components/Menu/Default.cshtml]
+[C:/Users/jvieira/Documents/projects/csharp/Files-Registration-System/ArchiveSystem/Views/Shared/Components/Menu/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudVxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/conta/Documents/projetos/csharp/ArchiveSystem/ArchiveSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/jvieira/Documents/projects/csharp/Files-Registration-System/ArchiveSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/conta/Documents/projetos/csharp/ArchiveSystem/ArchiveSystem/Views/Usuario/Editar.cshtml]
+[C:/Users/jvieira/Documents/projects/csharp/Files-Registration-System/ArchiveSystem/Views/Usuario/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/conta/Documents/projetos/csharp/ArchiveSystem/ArchiveSystem/Views/Usuario/Excluir.cshtml]
+[C:/Users/jvieira/Documents/projects/csharp/Files-Registration-System/ArchiveSystem/Views/Usuario/Excluir.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFeGNsdWlyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/conta/Documents/projetos/csharp/ArchiveSystem/ArchiveSystem/Views/Usuario/Index.cshtml]
+[C:/Users/jvieira/Documents/projects/csharp/Files-Registration-System/ArchiveSystem/Views/Usuario/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/conta/Documents/projetos/csharp/ArchiveSystem/ArchiveSystem/Views/_ViewImports.cshtml]
+[C:/Users/jvieira/Documents/projects/csharp/Files-Registration-System/ArchiveSystem/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/conta/Documents/projetos/csharp/ArchiveSystem/ArchiveSystem/Views/_ViewStart.cshtml]
+[C:/Users/jvieira/Documents/projects/csharp/Files-Registration-System/ArchiveSystem/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/conta/Documents/projetos/csharp/ArchiveSystem/ArchiveSystem/Views/Shared/_Layout.cshtml]
+[C:/Users/jvieira/Documents/projects/csharp/Files-Registration-System/ArchiveSystem/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-uqqjd2dv4b
 
-[C:/Users/conta/Documents/projetos/csharp/ArchiveSystem/ArchiveSystem/Views/Shared/_LayoutLogin.cshtml]
+[C:/Users/jvieira/Documents/projects/csharp/Files-Registration-System/ArchiveSystem/Views/Shared/_LayoutLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-v187206lp9
 
-[C:/Users/conta/Documents/projetos/csharp/ArchiveSystem/ArchiveSystem/Views/Shared/_LayoutSemSessao.cshtml]
+[C:/Users/jvieira/Documents/projects/csharp/Files-Registration-System/ArchiveSystem/Views/Shared/_LayoutSemSessao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRTZW1TZXNzYW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-g6v82vza9s

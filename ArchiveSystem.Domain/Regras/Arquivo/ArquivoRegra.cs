@@ -15,7 +15,6 @@ namespace ArchiveSystem.Domain.Regras.Arquivo
         private readonly IUnitOfWork _uow;
         private readonly ArquivoRepository _repository;
         private Criptografia _criptografia = new Criptografia();
-
         public ArquivoRegra(IUnitOfWork uow, ArquivoRepository repository)
         {
             _repository = repository;
