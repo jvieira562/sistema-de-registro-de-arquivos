@@ -22,19 +22,19 @@ namespace ArchiveSystem.Data.Repository
                     Nome,
                     Conteudo,
                     Tipo,
-                    Tamanho,
+                    
                     Cod_usuario)
                 VALUES(@Cod_Arquivo,
                     @Nome,
                     @Conteudo,
                     @Tipo,
-                    @Tamanho,
+                    
                     @Cod_Usuario) ",
                 new { Cod_Arquivo = arquivo.Cod_Arquivo,
                     Nome = arquivo.Nome,
                     Conteudo = arquivo.Conteudo,
                     Tipo = arquivo.Tipo,
-                    Tamanho = arquivo.Tamanho,
+                    
                     Cod_Usuario = cod_Usuario},
                     _session.Transaction);
             if (linhasAfetadas > 0)

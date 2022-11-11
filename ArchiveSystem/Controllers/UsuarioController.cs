@@ -54,7 +54,7 @@ namespace ArchiveSystem.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Editar(UsuarioModel usuario)
+        public ActionResult Edit(UsuarioModel usuario)
         {
             usuario = _sessao.BuscarSessao();
             if (usuario != null)

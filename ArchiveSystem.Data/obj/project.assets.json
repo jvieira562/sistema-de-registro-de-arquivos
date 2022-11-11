@@ -658,19 +658,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jvieira\\.nuget\\packages\\": {}
+    "C:\\Users\\conta\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jvieira\\Documents\\projects\\csharp\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj",
+      "projectUniqueName": "C:\\Users\\conta\\Documents\\projetos\\csharp\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj",
       "projectName": "ArchiveSystem.Data",
-      "projectPath": "C:\\Users\\jvieira\\Documents\\projects\\csharp\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj",
-      "packagesPath": "C:\\Users\\jvieira\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jvieira\\Documents\\projects\\csharp\\Files-Registration-System\\ArchiveSystem.Data\\obj\\",
+      "projectPath": "C:\\Users\\conta\\Documents\\projetos\\csharp\\Files-Registration-System\\ArchiveSystem.Data\\ArchiveSystem.Data.csproj",
+      "packagesPath": "C:\\Users\\conta\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\conta\\Documents\\projetos\\csharp\\Files-Registration-System\\ArchiveSystem.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jvieira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\conta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -684,11 +684,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\jvieira\\Documents\\projects\\csharp\\Files-Registration-System\\ArchiveSystem.Dtos\\ArchiveSystem.Dtos.csproj": {
-              "projectPath": "C:\\Users\\jvieira\\Documents\\projects\\csharp\\Files-Registration-System\\ArchiveSystem.Dtos\\ArchiveSystem.Dtos.csproj"
+            "C:\\Users\\conta\\Documents\\projetos\\csharp\\Files-Registration-System\\ArchiveSystem.Dtos\\ArchiveSystem.Dtos.csproj": {
+              "projectPath": "C:\\Users\\conta\\Documents\\projetos\\csharp\\Files-Registration-System\\ArchiveSystem.Dtos\\ArchiveSystem.Dtos.csproj"
             },
-            "C:\\Users\\jvieira\\Documents\\projects\\csharp\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj": {
-              "projectPath": "C:\\Users\\jvieira\\Documents\\projects\\csharp\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj"
+            "C:\\Users\\conta\\Documents\\projetos\\csharp\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj": {
+              "projectPath": "C:\\Users\\conta\\Documents\\projetos\\csharp\\Files-Registration-System\\ArchiveSystem.Models\\ArchiveSystem.Models.csproj"
             }
           }
         }

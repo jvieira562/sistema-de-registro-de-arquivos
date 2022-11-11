@@ -1,0 +1,33 @@
+@font-face {
+    font-family: Segoe UI Negrito;
+    src: url(../fonts/Segoe\ UI\ Bold.ttf);
+}
+
+@font-face {
+    font-family: Segoe UI;
+    src: url(../fonts/Segoe\ UI.ttf);
+}
+
+.cor-principal-bg {
+    /*background-color: #ed1c24;*/
+    background-color: #0078d4;
+}
+
+.navbar-principal {
+    height: 48px;
+}
+
+.foto-perfil-navbar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.cor-titulo-navbar {
+    color: white;
+}
+.opcoes-fixas-na-esquerda, .cabecalho {
+    font-size: 14px;
+    font-family: Segoe UI Negrito;
+}
